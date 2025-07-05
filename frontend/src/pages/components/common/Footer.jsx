@@ -39,7 +39,7 @@ function Footer() {
       time: new Date().toISOString()
     })
       .then((response) => {
-        console.log('Email sent successfully:', response);
+        //('Email sent successfully:', response);
         alert('Thank you for contacting us! We will get back to you soon.');
         e.target.reset(); // Reset the form fields
       }

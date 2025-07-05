@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -8,10 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET
 
-require('dotenv').config();
 app.use(cors());
 app.use(express.json()); // Ensure this middleware is applied
-
+// //('MONGO_URI:', process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI);
 
 const userSchema = new mongoose.Schema({
@@ -47,7 +47,7 @@ app.post('/api/register', async (req, res) => {
 // Login route
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
-  console.log('Login Request Body:', req.body);
+  //('Login Request Body:', req.body);
   if (!username || !password) {
     return res.status(400).json({ message: 'Username and password are required' });
   }
@@ -57,9 +57,9 @@ app.post('/api/login', async (req, res) => {
   }
 
   const hashedPassword = md5(password);
-  console.log('Entered Password:', password);
-  console.log('Hashed Entered Password:', hashedPassword);
-  console.log('Stored Password:', user.password);
+  //('Entered Password:', password);
+  //('Hashed Entered Password:', hashedPassword);
+  //('Stored Password:', user.password);
 
   const isMatch = hashedPassword === user.password;
   if (!isMatch) {
@@ -152,5 +152,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  //(`Server is running on port ${PORT}`);
 });

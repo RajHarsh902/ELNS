@@ -19,6 +19,7 @@
     "cors": "^2.8.5",
     "jsonwebtoken": "^9.0.2",
     "md5": "^2.3.0",
+    "niet_project_app": "file:..",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-modal-image": "^2.6.0",

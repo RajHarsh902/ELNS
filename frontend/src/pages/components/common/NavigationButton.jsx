@@ -2,7 +2,7 @@ import React from 'react'
 import './NavigationButton.css'
 
 const NavigationButton = (props) => {
-  console.log(props)
+  //(props)
   return (
     <>
         <button onClick={props.onClick} 

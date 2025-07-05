@@ -19,25 +19,25 @@ const UpdateNews = () => {
   }, []);
 
   const fetchNationalNews = async () => {
-    const response = await axios.get("http://localhost:5000/api/national-news");
+    const response = await axios.get("/api/national-news");
     setNationalNews(Array.isArray(response.data) ? response.data : []);
   };
 
   const fetchInternationalNews = async () => {
-    const response = await axios.get("http://localhost:5000/api/international-news");
+    const response = await axios.get("/api/international-news");
     setInternationalNews(Array.isArray(response.data) ? response.data : []);
   };
 
   const fetchMarketNews = async () => {
-    const response = await axios.get("http://localhost:5000/api/market-news");
+    const response = await axios.get("/api/market-news");
     setMarketNews(Array.isArray(response.data) ? response.data : []);
-    console.log(response.data);
+    //(response.data);
   };
 
   const fetchUpdates = async () => {
-    const response = await axios.get("http://localhost:5000/api/updates");
+    const response = await axios.get("/api/updates");
     setUpdates(Array.isArray(response.data) ? response.data : []);
-    console.log(response.data);
+    //(response.data);
   };
 
   const handleSubmit = async (e, type) => {
@@ -50,7 +50,7 @@ const UpdateNews = () => {
     }
 
 
-    await axios.post(`http://localhost:5000/api/${type}`, news);
+    await axios.post(`/api/${type}`, news);
     if (type === "national") {
       fetchNationalNews();
     } else if (type === "international") {
@@ -69,7 +69,7 @@ const UpdateNews = () => {
   };
 
   const handleDelete = async (id, type) => {
-    await axios.delete(`http://localhost:5000/api/${type}/${id}`);
+    await axios.delete(`/api/${type}/${id}`);
     if (type === "national") {
       fetchNationalNews();
     } else if (type === "international") {

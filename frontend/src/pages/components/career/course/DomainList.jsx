@@ -1,7 +1,7 @@
 import React from 'react'
 
 const DomainList = (props) => {
-  console.log(props)
+  //(props)
   const domainList = props.domain.map((domain, index) => {
     return <li key={index}>{domain}</li>
     });
