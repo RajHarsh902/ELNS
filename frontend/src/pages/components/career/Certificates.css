@@ -1,0 +1,100 @@
+/* Certificates Main Container */
+.certificatesContainer {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 auto; /* Center the container */
+}
+
+/* Title */
+.certificatesTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* List Styling */
+.certificatesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each List Item */
+.certificateItem {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.certificateItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Links */
+.certificateLink {
+  text-decoration: none;
+  color: #1e75de;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Link Hover Effect */
+.certificateLink:hover {
+  color: #c25d1a;
+  text-decoration: underline;
+}
+
+/* ---- RESPONSIVENESS ---- */
+@media (max-width: 768px) {
+  .certificatesContainer {
+    padding: 15px;
+  }
+
+  .certificatesTitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .certificateItem {
+    margin: 10px 0;
+    padding: 12px;
+  }
+
+  .certificateLink {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificatesContainer {
+    padding: 10px;
+  }
+
+  .certificatesTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .certificateItem {
+    margin: 8px 0;
+    padding: 10px;
+  }
+
+  .certificateLink {
+    font-size: 0.9rem;
+  }
+}

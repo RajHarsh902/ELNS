@@ -1,0 +1,36 @@
+.mainHome {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/images/happy-college-students-with-books-hands-walking-together-campus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(17 39 26 / 76%);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(27, 27, 28, 0.5);
+    width: 40%;
+    z-index: 1000;
+    transform-style: preserve-3d;
+    /* transition: transform 0.5s; Smooth transition for 3D effect */
+    /* transform: translateZ(-20px); */
+}
+
+.blink {
+  animation: blink-animation 2s linear infinite;
+}
+
+@keyframes blink-animation {
+  0%, 20%, 80%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

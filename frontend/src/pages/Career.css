@@ -1,0 +1,196 @@
+.careerMain {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* width: 100%; */
+    height: 100vh;
+    padding: 3%;
+    gap: 2rem;
+  }
+
+  .careerContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    width: 80%;
+    height: 85%;
+    margin-inline: 3rem;
+    border-radius: 5%;
+    z-index:1;
+    /* background-color: rgb(88, 102, 249); */
+  }
+  
+  .courses, .certificates {
+    /* width: 50%; */
+    position: absolute;
+    border-radius: 2%;
+    height: 100%;
+    margin: 0;
+    /* padding: 1rem; */
+    border-radius: 3%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+  }
+
+
+
+    .certificates{
+        right: 0;
+    }
+
+    .active {
+        animation: active 1s ease-in-out forwards; /* Add forwards to retain styles */
+    }
+    
+    .inactive {
+
+        animation: inactive 1s ease-in-out forwards; /* Add forwards to retain styles */
+    }
+  
+    .navigationButton.active{
+        /* background-color: #535bf2; */
+        color: white;
+        /* display: none; */
+        width: fit-content;
+        font-size: 70%;
+        position: absolute;
+        top: 45%;
+        animation: activeButton 1.3s ease-in-out forwards;
+    }
+
+    .navigationButton.inactive{
+        background-color: #f2f2f2;
+        color: black;
+        display: none;
+        /* animation: inactiveButton 1s ease-in-out forwards; Add forwards to retain styles */
+    }
+  .courses h2, .certificates h2 {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+@keyframes active{
+    0% {
+        width: 0%;
+        display: none
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes inactive{
+    0% {
+        width: 75%;
+    }
+    100% {
+        width: 0%;
+        display: none
+    }
+}
+
+@keyframes activeButton{
+    0%{
+        display: none;
+        opacity: 0;
+    }
+    95% {
+        display: none;
+        /* opacity: 0.3; */
+    }
+    99% {
+        display: block;
+        opacity: 0.6;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 660px) {
+    .careerContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        height: 80%;
+        margin-inline: 0;
+    }
+    .courses, .certificates {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 3%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow-x: hidden;
+    }
+
+    .certificates{
+        top: 4rem;
+    }
+
+    .active{
+        animation: active 1s ease-in-out forwards; /* Add forwards to retain styles */
+    }
+
+    .inactive{
+        animation: inactive 1s ease-in-out forwards; /* Add forwards to retain styles */
+    }
+
+
+    .navigationButton.active:not(.hide-on-mobile){
+        width: 5rem;
+        height: 3rem;
+        font-size: 70%;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        font-size: 0.8rem;
+        /* top: 45%; */
+        animation: activeButton 1.3s ease-in-out forwards;
+    }
+
+
+    .navigationButton.right:not(.hide-on-mobile){
+        right: 50%;
+        transform: translateX(50%);
+        top: 103%;
+    }
+
+    .navigationButton.left:not(.hide-on-mobile){
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0%;
+    }
+    .navigationButton.inactive{
+        display: none;
+    }
+
+    @keyframes active{
+        0% {
+            height: 0%;
+            display: none
+        }
+        100% {
+            height: 100%;
+        }
+        
+    }
+
+    @keyframes inactive{
+        0% {
+            height: 100%;
+        }
+        100% {
+            height: 0%;
+            display: none
+        }
+    }
+}

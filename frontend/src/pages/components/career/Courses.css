@@ -1,0 +1,50 @@
+.coursesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.courseContainer {
+    background: linear-gradient(white, #fdf1dc); /* Light gradient effect */
+    min-height: 300px; /* Ensures the section doesn't collapse */
+    background-image: url("/assets/doodle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center; /* Positions in the empty space */
+    opacity: 0.3; /* Keeps it subtle */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.courseContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .courseContainer {
+        width: 45%;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courseContainer {
+        width: 90%;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .courseContainer {
+        width: 100%;
+        min-height: 150px;
+    }
+}

@@ -1,0 +1,284 @@
+/* 🌌 Base Styles */
+.examMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b); /* Dark navy */
+  color: #e0f2fe;
+  padding: 4%;
+}
+
+.examTitle {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #38bdf8;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(56, 189, 248, 0.3);
+}
+
+/* 📄 Exam Content Box */
+.examContent {
+  width: 85%;
+  max-width: 850px;
+  padding: 2.5rem;
+  background: #1e293b; /* Dark blue background */
+  border: 2px solid #334155;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔽 Select Dropdown */
+.examContent select {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: #334155;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #64748b;
+  transition: border 0.2s ease-in-out;
+}
+
+.examContent select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  background-color: #475569;
+}
+
+/* 📂 PDF List */
+.pdfList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* 📝 PDF Items */
+.pdfItem {
+  background: #334155;
+  padding: 1.2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.pdfItem:hover {
+  background: #475569;
+  border-left: 4px solid #38bdf8;
+  transform: scale(1.02);
+}
+
+.pdfLink {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.pdfLink:hover {
+  text-decoration: underline;
+  color: #e0f2fe;
+}
+
+.pdfIcon {
+  font-size: 1.4rem;
+  color: #38bdf8;
+}
+
+/* 📁 Directory Containers */
+.directory {
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* 📦 Main Directory */
+.main-dir {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: #0f172a;
+  border: 2px solid #1e293b;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.05);
+}
+
+/* 📘 Subdirectory */
+.dir {
+  padding: 0.8rem 1rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+/* 🧩 Semester Directory */
+/* .semester-dir {
+  padding-left: 1rem;
+  border-left: 3px solid #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.semester-dir h4 {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 0.3rem;
+} */
+
+/* 📄 Subject Directory
+.subject-dir {
+  padding: 0.5rem 1rem;
+  background: #334155;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.subject-dir h5 {
+  font-size: 1rem;
+  color: #f1f5f9;
+} */
+
+/* Top-level: e.g., "Question Papers" */
+.expandable-label {
+  background-color: #334155;  /* Dark slate */
+  color: #f1f5f9;              /* Light text */
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s ease;
+  border: 1px solid #475569;
+}
+
+.expandable-label:hover {
+  background: #475569;
+  border-left: 4px solid #38bdf8;
+  transform: scale(1.02);
+}
+
+/* Subdirectories: e.g., "Semester 1" etc. */
+.subject-dir, .semester-dir {
+  background-color: #1e293b;    /* Base color */
+  color: #e2e8f0;               /* Light gray text */
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.subject-dir:hover,
+.semester-dir:hover {
+  background-color: #2c3e52; /* Similar to 'General' hover */
+}
+
+/* Icons (SVG or Unicode triangles) */
+.expandable-label svg,
+.subject-dir svg,
+.semester-dir svg {
+  fill: #38bdf8; /* Sky blue or adjust as needed */
+  margin-right: 8px;
+}
+
+
+
+
+/* 📊 Results Section */
+.results-section {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  background: #1e293b;
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.results-section h2 {
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.results-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.results-section li {
+  background: #334155;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.results-section a {
+  color: #f1f5f9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.results-section a:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 768px) {
+  .examContent {
+    padding: 1.5rem;
+  }
+
+  .examTitle {
+    font-size: 2rem;
+  }
+
+  .dir,
+  .main-dir {
+    padding: 1rem;
+  }
+
+  .pdfItem {
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .examTitle {
+    font-size: 1.6rem;
+  }
+
+  .pdfLink {
+    font-size: 1rem;
+  }
+
+  .examContent select {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .results-section {
+    padding: 1rem;
+  }
+}

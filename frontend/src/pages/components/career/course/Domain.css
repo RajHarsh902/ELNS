@@ -1,0 +1,295 @@
+.domainContainer {
+    /* margin-left: 15%; */
+    margin-inline: 3rem;
+    margin-top: 6%;
+    position: relative;
+    color: black;
+    z-index: 1;
+    height: 50%;
+    width: 90%;
+    rotate: 6deg;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.domainMain, .extra-domain{
+    /* position: absolute; */
+    width: 30%;
+    height: 100%;
+    /* display: flex; */
+    margin-inline: 1rem;
+    display: inline;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    transform: rotateY(0deg);
+    /* overflow-x: hidden; */
+}
+
+/* Improved Pin Visibility */
+.pin {
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    top: 2%;
+    left: 6%;
+    rotate: -6deg;
+    z-index: 100;  /* Ensuring it stays on top */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Adds a slight depth effect */
+}
+
+/* Paper Notes */
+.domain {
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    padding: 1rem;
+    outline: none;
+    background-color: #fffae3;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Front Note */
+.front-domain {
+    z-index: 2;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Back Note */
+.back-domain {
+    z-index: 1;
+    background-color: #ffe4b5;
+    opacity: 0.9;
+    height: 105%;
+    overflow-x: hidden;
+}
+
+/* Heading */
+.domain h3 {
+    font-size: 80%;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* List */
+.domainListContainer {
+    margin-left: 15%;
+    font-size: 60%;
+    text-align: left;
+    padding-left: 0.5%;
+}
+
+.domainListContainer li {
+    margin-bottom: 0.5%;
+    color: black;
+}
+
+/* Tear Effect */
+.tear {
+    animation: tearEffect 0.8s forwards;
+}
+
+@keyframes tearEffect {
+    0% { transform: rotate(0deg) translateY(0px); opacity: 1; }
+    50% { transform: rotate(8deg) translateY(10px) scaleX(1.02); opacity: 0.7; }
+    100% { transform: rotate(15deg) translateY(60px) scaleX(1.05); opacity: 0; }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .domainContainer {
+        /* flex-direction: column;
+        align-items: center; */
+        margin-left: 0;
+        margin-top: 3%;
+        height: 50%;
+    }
+
+    .domainMain, .extra-domain {
+        width: 30%;
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .extra-domain {
+        left: 0;
+    }
+
+    .domain h3 {
+        font-size: 1.2rem;
+    }
+
+    .domainListContainer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .domainContainer {
+        margin-inline: 2rem;
+        margin-top: 3%;
+        height: 50%;
+    }
+
+    .domainMain, .extra-domain {
+        width: 40%;
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .extra-domain {
+        left: 0;
+    }
+
+    .domain h3 {
+        font-size: 1.2rem;
+    }
+
+    .domainListContainer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .domainContainer {
+        padding: 2%;
+        height: 70%;   
+        /* flex-wrap: wrap; */
+        /* flex-direction: row; */
+    }
+
+    .domainMain, .extra-domain {
+        width: 70%;
+        height: 80%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    .domain{
+        padding: 0;
+        margin: 0;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .domain h3 {
+        font-size: 1rem;
+    }
+
+    .domainListContainer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .domainContainer {
+        padding: 1%;
+        height: 70%;
+    }
+
+    .pin{
+        height: 15%;
+        width: 15%;
+        top: 1rem;
+        left: 1rem;
+    }
+    .domainMain, .extra-domain {
+        width: 100%;
+        /* height: auto; */
+        height: 100%;
+    }
+
+    .domain h3 {
+        font-size: 1.2rem;
+    }
+
+    .domainListContainer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .domainContainer {
+        padding: 1rem;
+        margin-inline: 0;
+        rotate: 0deg;
+        height: 70%;
+        width: 100vw;
+    }
+
+    .domainMain, .extra-domain {
+        width: 80%;
+        padding: 1rem;
+        /* height: auto; */
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    .domain{
+        /* padding: 0.5rem; */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        rotate: 6deg;
+    }
+
+    .domain h3 {
+        font-size: 1rem;
+    }
+
+    .domainListContainer {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media (max-width: 280px) {
+    .domainContainer {
+        padding: 0;
+        margin-inline: 0;
+        rotate: 0deg;
+        height: 70%;
+        width: 100vw;
+    }
+
+    .domainMain, .extra-domain {
+        width: 100%;
+        /* height: auto; */
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .domain{
+        /* padding: 0.5rem; */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        rotate: 0deg;
+    }
+
+    .domain h3 {
+        font-size: 1rem;
+    }
+
+    .domainListContainer {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,80 @@
+.newsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-width: 27%;
+    max-height: 100%;
+    width: 30rem; /* Adjust width to ensure 4 items fit within 100% width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin: 1rem; 
+    padding: 1rem; 
+    background-color: rgba(28, 28, 28, 0.1); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    scroll-snap-align: start;
+    overflow-x: auto;
+    opacity: 0.9; /* Slightly transparent */
+    transition: transform 0.5s ease-in-out; /* Smooth transform transition with longer duration */
+}
+
+.newsContent:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.5s ease-in-out; /* Smooth scale transition */
+}
+
+.newsContent h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0; /* Add margin for spacing */
+    color: white;
+}
+
+.newsContent p {
+    font-size: 1rem;
+    margin: 0.5rem 0; /* Add margin for spacing */
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .newsContent {
+        width: 25rem; /* Adjust width for medium screens */
+    }
+
+    .newsContent h1 {
+        font-size: 1.3rem;
+    }
+
+    .newsContent p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsContent {
+        width: 20rem; /* Adjust width for small screens */
+    }
+
+    .newsContent h1 {
+        font-size: 1.2rem;
+    }
+
+    .newsContent p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsContent {
+        width: 15rem; /* Adjust width for extra small screens */
+    }
+
+    .newsContent h1 {
+        font-size: 1rem;
+    }
+
+    .newsContent p {
+        font-size: 0.7rem;
+    }
+}
