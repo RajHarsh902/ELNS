@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser';
 
 function Footer() {
   
+  const buttonRef = React.useRef(null);
 
   useEffect(() => {
     emailjs.init({
@@ -25,6 +26,9 @@ function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Disable the button to prevent multiple submissions
+    const text = buttonRef.current.innerText;
+    buttonRef.current.innerText = 'Sending...';
     const name = e.target[0].value;
     const email = e.target[1].value;
     const message = e.target[2].value;
@@ -32,6 +36,7 @@ function Footer() {
       alert('Please fill in all fields');
       return;
     }
+
     emailjs.send('service_qllajcf', 'template_cd1oaot', {
       name: name,
       email: email,
@@ -40,13 +45,16 @@ function Footer() {
     })
       .then((response) => {
         //('Email sent successfully:', response);
+        buttonRef.current.innerText = text; // Reset the button text
         alert('Thank you for contacting us! We will get back to you soon.');
         e.target.reset(); // Reset the form fields
       }
       )
       .catch((error) => {
         console.error('Error sending email:', error);
+        buttonRef.current.innerText = text; // Reset the button text
         alert('There was an error sending your message. Please try again later.');
+
       }
       );
   };
@@ -64,7 +72,7 @@ function Footer() {
             <input type='text' placeholder='Your Name' />
             <input type='email' placeholder='Your Email' />
             <textarea placeholder='Your Message'></textarea>
-            <button type='submit'>Send</button>
+            <button type='submit' ref={buttonRef}  >Send</button>
           </form>
           
         
