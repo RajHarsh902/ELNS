@@ -104,10 +104,6 @@ const certificates = [
         name: "Google Garage",
         link: "https://skillshop.exceedlms.com/student/catalog/list?category_ids=7879-google-digital-garage"
     },
-    {
-        name: "Oxford Home Study",
-        link: "https://www.oxfordhomestudy.com/courses/hr-courses-online/free-online-hr-courses-withcertificates?utm_source=chatgpt.com"
-    }
 ]
 
 export { courses, certificates };

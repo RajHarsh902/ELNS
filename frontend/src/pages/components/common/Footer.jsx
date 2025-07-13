@@ -78,7 +78,7 @@ function Footer() {
         
             <div className='social-media'>
                 <p>Email: contactuselns@gmail.com</p>
-                <p>Phone: +919643539031</p>
+                <p>Phone: +91 6396672886</p>
                 <h4>Follow Us</h4>
               
                 <div className='social-icons'>
@@ -88,7 +88,7 @@ function Footer() {
                     <a href='https://www.linkedin.com/in/rajharsh-sisodia-a8b4a41b1/'>
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a href='https://wa.me/qr/3MN47ERLVYGQE1'>
+                    <a href='https://wa.me/916396672886'>
                       <FontAwesomeIcon icon={faWhatsapp} />
                     </a>
 

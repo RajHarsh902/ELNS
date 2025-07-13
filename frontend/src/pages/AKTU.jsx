@@ -267,44 +267,44 @@ const courseDirectories = [
   },
 
   {
-  name: "Syllabus&Question papers",
+  name: "Syllabus",
   subDirs: [
     {
-      name: "MBA Net Syllabus",
+      name: "MBA NIET Syllabus",
       pdfs: [
-        { name: "(NIFT) Masters of Business Administration (MBA) Marketing", file: "/documents/Syllabus&Question papers/Question papers/MBA Net Syllabus/MBA_Marketing_Syllabus.pdf" },
-        { name: "(NIFT) Masters of Business Administration (MBA) First Year", file: "/documents/Syllabus&Question papers/Question papers/MBA Net Syllabus/MBA_First_Year_Syllabus.pdf" }
+        { name: "(NIET) Masters of Business Administration (MBA) Marketing", file: "/documents/MBA Niet Syllabus/(NIET) Masters of Business Administration  (MBA) Marketing & Finance  First Year.pdf" },
+        { name: "(NIET) Masters of Business Administration (MBA) First Year", file: "/documents/MBA Niet Syllabus/(NIET) Masters of Business Administration (MBA)  First Year.pdf" }
       ]
     },
     {
-      name: "MBA IEV NIFT Syllabus",
+      name: "MBA IEV NIET Syllabus",
       pdfs: [
-        { name: "(NIFT) Masters of Business Administration", file: "/documents/Syllabus&Question papers/Question papers/MBA IEV NIFT Syllabus/MBA_IEV_NIFT_Syllabus.pdf" }
+        { name: "(NIET) Masters of Business Administration", file: "/documents/MBA IEV NIET Syllabus/(NIET) Masters of Business Administration (Innovation Entrepreneurship and Venture Development) MBA (IEV).pdf" }
       ]
     },
     {
-      name: "MBA Intergrated NIFT Syllabus",
+      name: "MBA Intergrated NIET Syllabus",
       pdfs: [
-        { name: "(NIFT) MBA (Integrated) First Year Syllabus", file: "/documents/Syllabus&Question papers/Question papers/MBA Intergrated NIFT Syllabus/MBA_Integrated_First_Year_Syllabus.pdf" }
+        { name: "(NIET) MBA (Integrated) First Year Syllabus", file: "/documents/MBA Intergrated NIET Syllabus/(NIET) MBA (Integrated) First Year Syllabus 2024-25.pdf" }
       ]
     },
     {
       name: "MBA AKTU Syllabus",
       pdfs: [
-        { name: "AKTU UNIVERSITY MBA Common 1st Year", file: "/documents/Syllabus&Question papers/Question papers/MBA AKTU Syllabus/AKTU_MBA_Common_1st_Year.pdf" }
+        { name: "AKTU UNIVERSITY MBA Common 1st Year", file: "/documents/MBA AKTU Syllabus/AKTU UNIVERSITY MBA Common 1st Year Syllabus 2020_July.pdf" }
       ]
     },
     {
-      name: "BBA NIFT Syllabus",
+      name: "BBA NIET Syllabus",
       pdfs: [
-        { name: "(NIFT COLLEGE) Bachelor of Business Administration", file: "/documents/Syllabus&Question papers/Question papers/BBA NIFT Syllabus/BBA_NIFT_Syllabus.pdf" }
+        { name: "(NIET COLLEGE) Bachelor of Business Administration", file: "/documents/BBA NIET Syllabus/(NIET COLLEGE)    Bachelor of Business Administration (BBA).pdf" }
       ]
     },
 
     {
       name: "BBA CCS Syllabus",
       pdfs: [
-        { name: "BBASYLLABUS2020onwards", file: "/documents/Syllabus&Question papers/Question papers/BBA CCS Syllabus/BBASYLLABUS2020onwards.pdf" }
+        { name: "BBA SYLLABUS 2020 onwards", file: "/documents/BBA CCS Syllabus/BBASYLLABUS2020onwards.pdf" }
       ]
     }
   ]
