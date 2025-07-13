@@ -398,8 +398,7 @@ const AKTU = () => {
   <h2>Academic Results</h2>
   <ul>
     <li>
-      <a href="https://erp.aktu.ac.in/webpages/oneview/oneview.aspx?AspxAutoDetectCookieSupport=1
-" target="_blank" rel="noopener noreferrer">
+      <a href="https://aktu.ac.in/" target="_blank" rel="noopener noreferrer">
         AKTU Results
       </a>
     </li>
