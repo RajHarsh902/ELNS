@@ -38,6 +38,7 @@ const Domain = (props) => {
     const fetchAnnouncements = async () => {
       try {
         const response = await axios.get('/api/updates');
+        console.log('Announcements fetched:', response.data);
         setActiveSection(response.data.map(item => item.heading));
       } catch (error) {
         console.error('Error fetching announcements:', error);
