@@ -37,7 +37,7 @@ const Domain = (props) => {
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/updates');
+        const response = await axios.get('/api/updates');
         setActiveSection(response.data.map(item => item.heading));
       } catch (error) {
         console.error('Error fetching announcements:', error);
